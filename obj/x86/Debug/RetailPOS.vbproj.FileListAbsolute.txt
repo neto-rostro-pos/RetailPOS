@@ -1,0 +1,120 @@
+D:\GMC SEG Folder\vb.net\My Projects\RetailPOS\bin\Debug\RetailPOS.exe
+D:\GMC SEG Folder\vb.net\My Projects\RetailPOS\bin\Debug\RetailPOS.pdb
+D:\GMC SEG Folder\vb.net\My Projects\RetailPOS\bin\Debug\RetailPOS.xml
+D:\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.Resources.resources
+D:\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.exe
+D:\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.xml
+D:\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.pdb
+D:\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.frmMain.resources
+D:\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.frmPay.resources
+D:\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.frmPayCredit.resources
+D:\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.frmPayCheck.resources
+D:\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.frmPayGC.resources
+\\192.168.10.220\seg\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.exe
+\\192.168.10.220\seg\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.xml
+\\192.168.10.220\seg\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.pdb
+\\192.168.10.220\seg\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.frmMain.resources
+\\192.168.10.220\seg\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.Resources.resources
+\\192.168.10.220\seg\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.vbproj.GenerateResource.Cache
+\\192.168.10.220\seg\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.vbprojResolveAssemblyReference.cache
+Y:\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.exe
+Y:\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.xml
+Y:\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.pdb
+X:\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.exe
+X:\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.xml
+X:\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.pdb
+X:\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.vbprojResolveAssemblyReference.cache
+X:\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.frmMain.resources
+X:\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.Resources.resources
+X:\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.vbproj.GenerateResource.Cache
+Z:\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.frmMain.resources
+Z:\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.Resources.resources
+Z:\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.exe
+Z:\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.xml
+Z:\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.pdb
+D:\GMC SEG Folder\VBNET\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.vbprojResolveAssemblyReference.cache
+D:\GMC SEG Folder\VBNET\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.frmMain.resources
+D:\GMC SEG Folder\VBNET\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.Resources.resources
+D:\GMC SEG Folder\VBNET\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.vbproj.GenerateResource.Cache
+D:\GMC SEG Folder\VBNET\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.exe
+D:\GMC SEG Folder\VBNET\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.xml
+D:\GMC SEG Folder\VBNET\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.pdb
+\\fs2\seg\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.frmMain.resources
+\\fs2\seg\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.Resources.resources
+\\fs2\seg\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.vbproj.GenerateResource.Cache
+\\fs2\seg\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.vbprojResolveAssemblyReference.cache
+\\fs2\seg\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.exe
+\\fs2\seg\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.xml
+\\fs2\seg\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.pdb
+Z:\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.vbprojResolveAssemblyReference.cache
+Z:\GMC SEG Folder\vb.net\My Projects\RetailPOS\obj\x86\Debug\RetailPOS.vbproj.GenerateResource.Cache
+Y:\PEDRITOS POS\RetailPOS\obj\x86\Debug\RetailPOS.vbprojResolveAssemblyReference.cache
+Y:\PEDRITOS POS\RetailPOS\obj\x86\Debug\RetailPOS.Form1.resources
+Y:\PEDRITOS POS\RetailPOS\obj\x86\Debug\RetailPOS.frmMain.resources
+Y:\PEDRITOS POS\RetailPOS\obj\x86\Debug\RetailPOS.Resources.resources
+Y:\PEDRITOS POS\RetailPOS\obj\x86\Debug\RetailPOS.vbproj.GenerateResource.Cache
+Y:\PEDRITOS POS\RetailPOS\obj\x86\Debug\RetailPOS.exe
+Y:\PEDRITOS POS\RetailPOS\obj\x86\Debug\RetailPOS.xml
+Y:\PEDRITOS POS\RetailPOS\obj\x86\Debug\RetailPOS.pdb
+Y:\POS\RetailPOS\obj\x86\Debug\RetailPOS.vbprojResolveAssemblyReference.cache
+Y:\POS\RetailPOS\obj\x86\Debug\RetailPOS.frmMain.resources
+Y:\POS\RetailPOS\obj\x86\Debug\RetailPOS.frmMain1.resources
+Y:\POS\RetailPOS\obj\x86\Debug\RetailPOS.Form1.resources
+Y:\POS\RetailPOS\obj\x86\Debug\RetailPOS.frmMainold.resources
+Y:\POS\RetailPOS\obj\x86\Debug\RetailPOS.Resources.resources
+Y:\POS\RetailPOS\obj\x86\Debug\RetailPOS.vbproj.GenerateResource.Cache
+Y:\POS\RetailPOS\obj\x86\Debug\RetailPOS.exe
+Y:\POS\RetailPOS\obj\x86\Debug\RetailPOS.xml
+Y:\POS\RetailPOS\obj\x86\Debug\RetailPOS.pdb
+D:\POS\RetailPOS\obj\x86\Debug\RetailPOS.vbproj.AssemblyReference.cache
+D:\POS\RetailPOS\obj\x86\Debug\RetailPOS.frmMain.resources
+D:\POS\RetailPOS\obj\x86\Debug\RetailPOS.frmMain1.resources
+D:\POS\RetailPOS\obj\x86\Debug\RetailPOS.Form1.resources
+D:\POS\RetailPOS\obj\x86\Debug\RetailPOS.Resources.resources
+D:\POS\RetailPOS\obj\x86\Debug\RetailPOS.vbproj.GenerateResource.cache
+D:\POS\RetailPOS\obj\x86\Debug\RetailPOS.vbproj.CoreCompileInputs.cache
+D:\POS\RetailPOS\obj\x86\Debug\RetailPOS.vbproj.CopyComplete
+D:\POS\RetailPOS\obj\x86\Debug\RetailPOS.exe
+D:\POS\RetailPOS\obj\x86\Debug\RetailPOS.xml
+D:\POS\RetailPOS\obj\x86\Debug\RetailPOS.pdb
+D:\POSold\RetailPOS\obj\x86\Debug\RetailPOS.vbproj.AssemblyReference.cache
+D:\POSold\RetailPOS\obj\x86\Debug\RetailPOS.frmMain.resources
+D:\POSold\RetailPOS\obj\x86\Debug\RetailPOS.frmMain1.resources
+D:\POSold\RetailPOS\obj\x86\Debug\RetailPOS.Form1.resources
+D:\POSold\RetailPOS\obj\x86\Debug\RetailPOS.Resources.resources
+D:\POSold\RetailPOS\obj\x86\Debug\RetailPOS.vbproj.GenerateResource.cache
+D:\POSold\RetailPOS\obj\x86\Debug\RetailPOS.vbproj.CoreCompileInputs.cache
+D:\POSold\RetailPOS\obj\x86\Debug\RetailPOS.vbproj.CopyComplete
+D:\POSold\RetailPOS\obj\x86\Debug\RetailPOS.exe
+D:\POSold\RetailPOS\obj\x86\Debug\RetailPOS.xml
+D:\POSold\RetailPOS\obj\x86\Debug\RetailPOS.pdb
+D:\LP POS\POSold\RetailPOS\obj\x86\Debug\RetailPOS.vbproj.AssemblyReference.cache
+D:\LP POS\POSold\RetailPOS\obj\x86\Debug\RetailPOS.frmMain.resources
+D:\LP POS\POSold\RetailPOS\obj\x86\Debug\RetailPOS.frmMain1.resources
+D:\LP POS\POSold\RetailPOS\obj\x86\Debug\RetailPOS.Form1.resources
+D:\LP POS\POSold\RetailPOS\obj\x86\Debug\RetailPOS.Resources.resources
+D:\LP POS\POSold\RetailPOS\obj\x86\Debug\RetailPOS.vbproj.GenerateResource.cache
+D:\LP POS\POSold\RetailPOS\obj\x86\Debug\RetailPOS.vbproj.CoreCompileInputs.cache
+D:\LP POS\POSold\RetailPOS\obj\x86\Debug\RetailPOS.vbproj.CopyComplete
+D:\LP POS\POSold\RetailPOS\obj\x86\Debug\RetailPOS.exe
+D:\LP POS\POSold\RetailPOS\obj\x86\Debug\RetailPOS.xml
+D:\LP POS\POSold\RetailPOS\obj\x86\Debug\RetailPOS.pdb
+C:\GGC_Systems\vb.net\RetMgySys\WinSCP.exe
+C:\GGC_Systems\vb.net\RetMgySys\RetailPOS.exe.config
+C:\GGC_Systems\vb.net\RetMgySys\RetailPOS.exe
+C:\GGC_Systems\vb.net\RetMgySys\RetailPOS.pdb
+C:\GGC_Systems\vb.net\RetMgySys\RetailPOS.xml
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailPOS\obj\x86\Debug\RetailPOS.vbproj.AssemblyReference.cache
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailPOS\obj\x86\Debug\RetailPOS.frmMain.resources
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailPOS\obj\x86\Debug\RetailPOS.frmMain1.resources
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailPOS\obj\x86\Debug\RetailPOS.Form1.resources
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailPOS\obj\x86\Debug\RetailPOS.Resources.resources
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailPOS\obj\x86\Debug\RetailPOS.vbproj.GenerateResource.cache
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailPOS\obj\x86\Debug\RetailPOS.vbproj.CoreCompileInputs.cache
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailPOS\obj\x86\Debug\RetailPOS.vbproj.CopyComplete
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailPOS\obj\x86\Debug\RetailPOS.exe
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailPOS\obj\x86\Debug\RetailPOS.xml
+D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailPOS\obj\x86\Debug\RetailPOS.pdb
