@@ -33,12 +33,12 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
-    <OutputPath>C:\GGC_Systems\vb.net\RetMgySys\</OutputPath>
+    <OutputPath>..\..\..\..\..\GGC_Systems\vb.net\RetMgtSys\</OutputPath>
     <DocumentationFile>RetailPOS.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <Prefer32Bit>false</Prefer32Bit>
@@ -119,6 +119,30 @@
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmPay.designer.vb">
+      <DependentUpon>frmPay.vb</DependentUpon>
+    </Compile>
+    <None Include="frmPay.vb">
+      <SubType>Form</SubType>
+    </None>
+    <Compile Include="frmPayCheck.designer.vb">
+      <DependentUpon>frmPayCheck.vb</DependentUpon>
+    </Compile>
+    <None Include="frmPayCheck.vb">
+      <SubType>Form</SubType>
+    </None>
+    <Compile Include="frmPayCredit.designer.vb">
+      <DependentUpon>frmPayCredit.vb</DependentUpon>
+    </Compile>
+    <None Include="frmPayCredit.vb">
+      <SubType>Form</SubType>
+    </None>
+    <Compile Include="frmPayGC.designer.vb">
+      <DependentUpon>frmPayGC.vb</DependentUpon>
+    </Compile>
+    <None Include="frmPayGC.vb">
+      <SubType>Form</SubType>
+    </None>
     <Compile Include="modMain.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -146,6 +170,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPay.resx">
+      <DependentUpon>frmPay.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPayCheck.resx">
+      <DependentUpon>frmPayCheck.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPayCredit.resx">
+      <DependentUpon>frmPayCredit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPayGC.resx">
+      <DependentUpon>frmPayGC.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -348,10 +384,6 @@
     <ProjectReference Include="..\ggcPayment\ggcPayment.vbproj">
       <Project>{a7bb8738-7dd6-45a0-90c9-fc346648fbf3}</Project>
       <Name>ggcPayment</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ggcRetailParams\ggcRetailParams\ggcRetailParams.vbproj">
-      <Project>{4883F473-C0B0-4266-A9AC-8E4BCA3C4CB7}</Project>
-      <Name>ggcRetailParams</Name>
     </ProjectReference>
     <ProjectReference Include="..\ggcRetailSales\ggcRetailSales.vbproj">
       <Project>{81352368-B116-4D39-8FFB-5A74905DE7F8}</Project>
