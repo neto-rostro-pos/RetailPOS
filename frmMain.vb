@@ -107,7 +107,7 @@ Public Class frmMain
             If .Detail(pnActiveRow, "cReversex") = "-" Then Exit Sub
             If .Master("sTableNox") <> "0" And .Master("sTableNox") <> "" Then
                 If .Detail(pnActiveRow, "cPrintedx") = 1 Then
-                    If Not .getUserApproval Then Exit Sub
+                    If Not p_oAppDriver.getUserApproval Then Exit Sub
                 End If
             End If
 
