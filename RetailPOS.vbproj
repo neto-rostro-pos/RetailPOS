@@ -33,7 +33,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
@@ -119,30 +119,6 @@
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPay.designer.vb">
-      <DependentUpon>frmPay.vb</DependentUpon>
-    </Compile>
-    <None Include="frmPay.vb">
-      <SubType>Form</SubType>
-    </None>
-    <Compile Include="frmPayCheck.designer.vb">
-      <DependentUpon>frmPayCheck.vb</DependentUpon>
-    </Compile>
-    <None Include="frmPayCheck.vb">
-      <SubType>Form</SubType>
-    </None>
-    <Compile Include="frmPayCredit.designer.vb">
-      <DependentUpon>frmPayCredit.vb</DependentUpon>
-    </Compile>
-    <None Include="frmPayCredit.vb">
-      <SubType>Form</SubType>
-    </None>
-    <Compile Include="frmPayGC.designer.vb">
-      <DependentUpon>frmPayGC.vb</DependentUpon>
-    </Compile>
-    <None Include="frmPayGC.vb">
-      <SubType>Form</SubType>
-    </None>
     <Compile Include="modMain.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -170,18 +146,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmPay.resx">
-      <DependentUpon>frmPay.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmPayCheck.resx">
-      <DependentUpon>frmPayCheck.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmPayCredit.resx">
-      <DependentUpon>frmPayCredit.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmPayGC.resx">
-      <DependentUpon>frmPayGC.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
