@@ -104,6 +104,7 @@ Public Class frmMain
         p_oTrans.Cashier = psCashierx
         p_oTrans.LogName = modMain.p_sLogName
 
+        Debug.Print(psCashierx)
         Call initDetailImages()
         Call initCategoryImages()
 
@@ -223,11 +224,11 @@ Public Class frmMain
             Case Keys.Subtract
                 Call procValues(1)
                 e.SuppressKeyPress = True
-                'Case Keys.F9 'pay charge
-                '    p_oTrans.PrintChargeOR()
-                '    Call newOrder()
-                'Case Keys.F10 'tag charge
-                '    p_oTrans.PayCharge()
+            Case Keys.F9 'pay charge
+                p_oTrans.PrintChargeOR()
+                Call newOrder()
+            Case Keys.F10 'tag charge
+                p_oTrans.PayCharge()
                 Call newOrder()
             Case Keys.F7 'Charge Invoice
                 If p_oTrans.ChargeOrder() Then newOrder()
