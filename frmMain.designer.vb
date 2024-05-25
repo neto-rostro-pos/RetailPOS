@@ -640,7 +640,7 @@ Partial Class frmMain
         Me.cmdButton14.Size = New System.Drawing.Size(100, 35)
         Me.cmdButton14.TabIndex = 42
         Me.cmdButton14.TabStop = False
-        Me.cmdButton14.Text = "CANCEL O.R."
+        Me.cmdButton14.Text = "CANCEL S.I."
         Me.cmdButton14.UseVisualStyleBackColor = False
         '
         'cmdButton13
@@ -1841,7 +1841,7 @@ Partial Class frmMain
         Me.lblMaster80.Location = New System.Drawing.Point(981, 35)
         Me.lblMaster80.Name = "lblMaster80"
         Me.lblMaster80.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.lblMaster80.Size = New System.Drawing.Size(23, 16)
+        Me.lblMaster80.Size = New System.Drawing.Size(22, 16)
         Me.lblMaster80.TabIndex = 294
         Me.lblMaster80.Text = "02"
         '
@@ -1852,7 +1852,7 @@ Partial Class frmMain
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(18, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(206, Byte), Integer))
         Me.Label3.Location = New System.Drawing.Point(692, 35)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(114, 16)
+        Me.Label3.Size = New System.Drawing.Size(113, 16)
         Me.Label3.TabIndex = 293
         Me.Label3.Text = "POS Terminal No.:"
         '

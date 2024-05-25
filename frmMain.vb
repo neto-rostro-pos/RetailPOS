@@ -362,7 +362,7 @@ Public Class frmMain
                     Call ClearOrder()
                     'End If
                 Case 17
-                    Call p_oTrans.Reprint()
+                    Call .Reprint()
                 Case 18
                     If p_oTrans.BrowseOpenOrder() Then
                         loadOrder()
@@ -564,7 +564,7 @@ endProc:
 
     '    'lblMaster13.Text = FormatNumber(CDbl(lblMaster04.Text) / 1.12, 2) 'vat sales
     '    'lblMaster14.Text = FormatNumber(CDbl(lblMaster13.Text) * 0.12, 2) 'vat amount
-    '    'lblMaster15.Text = FormatNumber(CDbl(lblMaster13.Text) + CDbl(lblMaster14.Text), 2) 'non vat 
+    '    'lblMaster15.Text = FormatNumber(CDbl(lblMastrer13.Text) + CDbl(lblMaster14.Text), 2) 'non vat 
     '    'lblMaster17.Text = FormatNumber(p_oTrans.Master("nDiscount") + p_oTrans.Master("nPWDDiscx"), 2) 'discounts
     '    ''jovan 03-12-2021
 
@@ -1584,4 +1584,5 @@ endProc:
             txtDetail00.AutoCompleteMode = AutoCompleteMode.None
         End If
     End Sub
+
 End Class
