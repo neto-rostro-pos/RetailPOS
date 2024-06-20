@@ -1,6 +1,7 @@
 ﻿Imports ggcRetailSales
 Imports ggcAppDriver
 Imports ggcReceipt
+Imports System.Runtime.InteropServices
 
 Public Class frmMain
     'fixed image max count
@@ -70,13 +71,21 @@ Public Class frmMain
         Label4.Text = p_oTrans.BranchName
         Label9.Text = p_oTrans.Address
 
-        Call initDetailImages()
+
+
+
         Call initCategoryImages()
+        If p_oAppDriver.BranchCode = "P013" Then
+            initDetailImages("0021")
+        Else
+            Call initDetailImages()
+        End If
 
         loadTable()
         If p_oTrans.LoadOrder Then
             loadOrder()
         End If
+
 
         Call loadMaster()
     End Sub
@@ -105,7 +114,12 @@ Public Class frmMain
         p_oTrans.LogName = modMain.p_sLogName
 
         Debug.Print(psCashierx)
-        Call initDetailImages()
+
+        If p_oAppDriver.BranchCode = "P013" Then
+            initDetailImages("0021")
+        Else
+            Call initDetailImages()
+        End If
         Call initCategoryImages()
 
         loadMaster()
@@ -179,7 +193,8 @@ Public Class frmMain
             Call grpEventHandler(Me, GetType(Label), "lblTable", "DoubleClick", AddressOf lblTable_DoubleClick)
 
             Call newOrder()
-            
+
+
 
             If p_oTrans.cTranMode.Equals("D") Then
                 lblPStat.Visible = True

@@ -97,6 +97,7 @@ Partial Class frmMain
         Me.pnlMenu = New System.Windows.Forms.Panel()
         Me.picDetail28 = New System.Windows.Forms.PictureBox()
         Me.picDetail24 = New System.Windows.Forms.PictureBox()
+        Me.picDetail09 = New System.Windows.Forms.PictureBox()
         Me.picDetail27 = New System.Windows.Forms.PictureBox()
         Me.picDetail23 = New System.Windows.Forms.PictureBox()
         Me.picDetail25 = New System.Windows.Forms.PictureBox()
@@ -131,7 +132,6 @@ Partial Class frmMain
         Me.lblMaster00 = New System.Windows.Forms.Label()
         Me.Label37 = New System.Windows.Forms.Label()
         Me.lblMaster05 = New System.Windows.Forms.Label()
-        Me.picDetail09 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.lblMaster92 = New System.Windows.Forms.Label()
         Me.lblPStat = New System.Windows.Forms.Label()
@@ -172,6 +172,7 @@ Partial Class frmMain
         Me.pnlMenu.SuspendLayout()
         CType(Me.picDetail28, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picDetail24, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picDetail09, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picDetail27, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picDetail23, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picDetail25, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -202,7 +203,6 @@ Partial Class frmMain
         CType(Me.picDetail00, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel5.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picDetail09, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -1173,6 +1173,7 @@ Partial Class frmMain
         Me.pnlMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.pnlMenu.Controls.Add(Me.picDetail28)
         Me.pnlMenu.Controls.Add(Me.picDetail24)
+        Me.pnlMenu.Controls.Add(Me.picDetail09)
         Me.pnlMenu.Controls.Add(Me.picDetail27)
         Me.pnlMenu.Controls.Add(Me.picDetail23)
         Me.pnlMenu.Controls.Add(Me.picDetail25)
@@ -1229,6 +1230,18 @@ Partial Class frmMain
         Me.picDetail24.Size = New System.Drawing.Size(70, 70)
         Me.picDetail24.TabIndex = 57
         Me.picDetail24.TabStop = False
+        '
+        'picDetail09
+        '
+        Me.picDetail09.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.picDetail09.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.picDetail09.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.picDetail09.Location = New System.Drawing.Point(304, 78)
+        Me.picDetail09.Margin = New System.Windows.Forms.Padding(2)
+        Me.picDetail09.Name = "picDetail09"
+        Me.picDetail09.Size = New System.Drawing.Size(70, 70)
+        Me.picDetail09.TabIndex = 27
+        Me.picDetail09.TabStop = False
         '
         'picDetail27
         '
@@ -1670,18 +1683,6 @@ Partial Class frmMain
         Me.lblMaster05.TabIndex = 5
         Me.lblMaster05.Text = "Michael Torres Cuison"
         '
-        'picDetail09
-        '
-        Me.picDetail09.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.picDetail09.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.picDetail09.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.picDetail09.Location = New System.Drawing.Point(850, 3)
-        Me.picDetail09.Margin = New System.Windows.Forms.Padding(2)
-        Me.picDetail09.Name = "picDetail09"
-        Me.picDetail09.Size = New System.Drawing.Size(70, 70)
-        Me.picDetail09.TabIndex = 27
-        Me.picDetail09.TabStop = False
-        '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
@@ -1894,7 +1895,6 @@ Partial Class frmMain
         Me.ClientSize = New System.Drawing.Size(1029, 768)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.picDetail09)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.KeyPreview = True
@@ -1926,6 +1926,7 @@ Partial Class frmMain
         Me.pnlMenu.ResumeLayout(False)
         CType(Me.picDetail28, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picDetail24, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picDetail09, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picDetail27, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picDetail23, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picDetail25, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1956,7 +1957,6 @@ Partial Class frmMain
         CType(Me.picDetail00, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel5.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picDetail09, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
