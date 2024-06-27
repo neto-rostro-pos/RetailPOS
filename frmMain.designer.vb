@@ -296,11 +296,11 @@ Partial Class frmMain
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.ForestGreen
-        Me.Label10.Location = New System.Drawing.Point(12, 144)
+        Me.Label10.Location = New System.Drawing.Point(33, 144)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(158, 18)
+        Me.Label10.Size = New System.Drawing.Size(148, 18)
         Me.Label10.TabIndex = 313
-        Me.Label10.Text = "Service Charge:"
+        Me.Label10.Text = "Service Charge"
         '
         'Label16
         '

@@ -547,16 +547,21 @@ endProc:
         'jovan 03-12-2021
 
         lnSrvCrge = IFNull(p_oTrans.Master("nSChargex"), 0)
-        If CDbl(lblMaster15.Text) > 0 Then
-            If lnSrvCrge = 0 Then
-                lnSrvCrge = 0.0
+        If lnSrvCrge > 0 Then
+            If CDbl(lblMaster15.Text) > 0 Then
+                'If lnSrvCrge = 0 Then
+                '    lnSrvCrge = 0.0
+                'Else
+                lnSrvCrge = CDbl(IIf(lblMaster13.Text > 0, (CDbl(lblMaster13.Text) + CDbl(lblMaster15.Text)) - CDbl(lblMaster17.Text), CDbl(lblMaster15.Text) - CDbl(lblMaster17.Text))) * 0.05
+                'End If
+                lnAmntDuex = FormatNumber(CDbl(lblMaster13.Text) + CDbl(lblMaster14.Text) + CDbl(lblMaster15.Text) - CDbl(lblMaster17.Text), 2)
             Else
-                lnSrvCrge = CDbl(lblMaster13.Text) * 0.05
-            End If
-            lnAmntDuex = FormatNumber((CDbl(lblMaster13.Text) + CDbl(lblMaster15.Text) - CDbl(lblMaster17.Text)) + CDbl(lblMaster14.Text))
+                lnAmntDuex = FormatNumber(CDbl(lblMaster13.Text) + CDbl(lblMaster14.Text) + CDbl(lblMaster15.Text) - CDbl(lblMaster17.Text), 2)
+            End If 'amount due
         Else
-            lnAmntDuex = FormatNumber(CDbl(lblMaster04.Text) - CDbl(lblMaster17.Text), 2)
-        End If 'amount due
+            lnAmntDuex = FormatNumber(CDbl(lblMaster13.Text) + CDbl(lblMaster14.Text) + CDbl(lblMaster15.Text) - CDbl(lblMaster17.Text), 2)
+        End If
+
         'lblAmount.Text = FormatNumber(CDbl(lblMaster04.Text) - CDbl(lblMaster17.Text), 2) 'amount due
 
         lblSrvCrge.Text = FormatNumber(lnSrvCrge, 2)
@@ -1599,5 +1604,6 @@ endProc:
             txtDetail00.AutoCompleteMode = AutoCompleteMode.None
         End If
     End Sub
+
 
 End Class
