@@ -1586,7 +1586,7 @@ endProc:
                     Case 13
                         .SetToolTip(cmdButton, "End Shift")
                     Case 14
-                        .SetToolTip(cmdButton, "Cancel O.R.")
+                        .SetToolTip(cmdButton, "Cancel S.I.")
                     Case 15
                         .SetToolTip(cmdButton, "Pay Charge")
                     Case 19
