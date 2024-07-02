@@ -557,6 +557,7 @@ endProc:
                 lnAmntDuex = FormatNumber(CDbl(lblMaster13.Text) + CDbl(lblMaster14.Text) + CDbl(lblMaster15.Text) - CDbl(lblMaster17.Text), 2)
             Else
                 lnAmntDuex = FormatNumber(CDbl(lblMaster13.Text) + CDbl(lblMaster14.Text) + CDbl(lblMaster15.Text) - CDbl(lblMaster17.Text), 2)
+                lnSrvCrge = CDbl(IIf(lblMaster13.Text > 0, CDbl(lblMaster13.Text) + CDbl(lblMaster15.Text) - CDbl(lblMaster17.Text), CDbl(lblMaster15.Text) - CDbl(lblMaster17.Text))) * 0.05
             End If 'amount due
         Else
             lnAmntDuex = FormatNumber(CDbl(lblMaster13.Text) + CDbl(lblMaster14.Text) + CDbl(lblMaster15.Text) - CDbl(lblMaster17.Text), 2)
