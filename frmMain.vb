@@ -542,25 +542,21 @@ endProc:
 
         lblMaster13.Text = FormatNumber(p_oTrans.Master("nVATSales"), 2) 'vat sales
         lblMaster14.Text = FormatNumber(p_oTrans.Master("nVATAmtxx"), 2) 'vat amount
-        lblMaster15.Text = FormatNumber(p_oTrans.Master("nNonVATxx"), 2) 'non vat 
+        lblMaster15.Text = FormatNumber(p_oTrans.Master("nNonVATxx") - p_oTrans.Master("nPWDDiscx"), 2) 'non vat 
         lblMaster17.Text = FormatNumber(p_oTrans.Master("nDiscount") + p_oTrans.Master("nVatDiscx") + p_oTrans.Master("nPWDDiscx"), 2) 'discounts
         'jovan 03-12-2021
 
         lnSrvCrge = IFNull(p_oTrans.Master("nSChargex"), 0)
         If lnSrvCrge > 0 Then
             If CDbl(lblMaster15.Text) > 0 Then
-                'If lnSrvCrge = 0 Then
-                '    lnSrvCrge = 0.0
-                'Else
-                lnSrvCrge = CDbl(IIf(lblMaster13.Text > 0, (CDbl(lblMaster13.Text) + CDbl(lblMaster15.Text)) - CDbl(lblMaster17.Text), CDbl(lblMaster15.Text) - CDbl(lblMaster17.Text))) * 0.05
-                'End If
-                lnAmntDuex = FormatNumber(CDbl(lblMaster13.Text) + CDbl(lblMaster14.Text) + CDbl(lblMaster15.Text) - CDbl(lblMaster17.Text), 2)
+                lnAmntDuex = FormatNumber(CDbl(lblMaster13.Text) + CDbl(lblMaster14.Text) + CDbl(lblMaster15.Text), 2)
+                lnSrvCrge = CDbl(IIf(lblMaster13.Text > 0, (CDbl(lblMaster13.Text) + CDbl(lblMaster15.Text)), CDbl(lblMaster15.Text))) * 0.05
             Else
-                lnAmntDuex = FormatNumber(CDbl(lblMaster13.Text) + CDbl(lblMaster14.Text) + CDbl(lblMaster15.Text) - CDbl(lblMaster17.Text), 2)
-                lnSrvCrge = CDbl(IIf(lblMaster13.Text > 0, CDbl(lblMaster13.Text) + CDbl(lblMaster15.Text) - CDbl(lblMaster17.Text), CDbl(lblMaster15.Text) - CDbl(lblMaster17.Text))) * 0.05
+                lnAmntDuex = FormatNumber(CDbl(lblMaster13.Text) + CDbl(lblMaster14.Text) + CDbl(lblMaster15.Text), 2)
+                lnSrvCrge = CDbl(IIf(lblMaster13.Text > 0, CDbl(lblMaster13.Text) + CDbl(lblMaster15.Text), CDbl(lblMaster15.Text))) * 0.05
             End If 'amount due
         Else
-            lnAmntDuex = FormatNumber(CDbl(lblMaster13.Text) + CDbl(lblMaster14.Text) + CDbl(lblMaster15.Text) - CDbl(lblMaster17.Text), 2)
+            lnAmntDuex = FormatNumber(CDbl(lblMaster13.Text) + CDbl(lblMaster14.Text) + CDbl(lblMaster15.Text), 2)
         End If
 
         'lblAmount.Text = FormatNumber(CDbl(lblMaster04.Text) - CDbl(lblMaster17.Text), 2) 'amount due
@@ -571,7 +567,7 @@ endProc:
         p_oTrans.setTranTotal = lblAmount.Text
         p_oTrans.setSChargex = lnSrvCrge
         p_oTrans.setBill = lnAmntDuex
-        p_oTrans.servicecharge = lnSrvCrge
+        p_oTrans.servicecharge = Format(lnSrvCrge, xsDECIMAL)
 
     End Sub
 
