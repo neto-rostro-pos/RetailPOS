@@ -23,10 +23,10 @@ Partial Class frmMain1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain1))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain1))
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.lblSrvCrge = New System.Windows.Forms.Label()
@@ -52,6 +52,7 @@ Partial Class frmMain1
         Me.picButton00 = New System.Windows.Forms.PictureBox()
         Me.picButton02 = New System.Windows.Forms.PictureBox()
         Me.pnlButton = New System.Windows.Forms.Panel()
+        Me.cmdButton16 = New System.Windows.Forms.Button()
         Me.cmdButton15 = New System.Windows.Forms.Button()
         Me.cmdButton06 = New System.Windows.Forms.Button()
         Me.cmdButton14 = New System.Windows.Forms.Button()
@@ -145,7 +146,6 @@ Partial Class frmMain1
         Me.lblCurTimex = New System.Windows.Forms.Label()
         Me.lblCurDatex = New System.Windows.Forms.Label()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
-        Me.cmdButton16 = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.pnlDetButt.SuspendLayout()
@@ -524,6 +524,23 @@ Partial Class frmMain1
         Me.pnlButton.Name = "pnlButton"
         Me.pnlButton.Size = New System.Drawing.Size(112, 674)
         Me.pnlButton.TabIndex = 6
+        '
+        'cmdButton16
+        '
+        Me.cmdButton16.BackColor = System.Drawing.SystemColors.Control
+        Me.cmdButton16.BackgroundImage = CType(resources.GetObject("cmdButton16.BackgroundImage"), System.Drawing.Image)
+        Me.cmdButton16.FlatAppearance.BorderSize = 0
+        Me.cmdButton16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cmdButton16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdButton16.ForeColor = System.Drawing.SystemColors.Control
+        Me.cmdButton16.Location = New System.Drawing.Point(3, 5)
+        Me.cmdButton16.Margin = New System.Windows.Forms.Padding(2)
+        Me.cmdButton16.Name = "cmdButton16"
+        Me.cmdButton16.Size = New System.Drawing.Size(100, 35)
+        Me.cmdButton16.TabIndex = 48
+        Me.cmdButton16.TabStop = False
+        Me.cmdButton16.Text = "NEW ORDER"
+        Me.cmdButton16.UseVisualStyleBackColor = False
         '
         'cmdButton15
         '
@@ -1663,7 +1680,7 @@ Partial Class frmMain1
         Me.lblMaster91.Location = New System.Drawing.Point(807, 51)
         Me.lblMaster91.Name = "lblMaster91"
         Me.lblMaster91.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.lblMaster91.Size = New System.Drawing.Size(78, 16)
+        Me.lblMaster91.Size = New System.Drawing.Size(77, 16)
         Me.lblMaster91.TabIndex = 304
         Me.lblMaster91.Text = ",Wednesday"
         '
@@ -1687,7 +1704,7 @@ Partial Class frmMain1
         Me.lblMaster90.Location = New System.Drawing.Point(882, 51)
         Me.lblMaster90.Name = "lblMaster90"
         Me.lblMaster90.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.lblMaster90.Size = New System.Drawing.Size(122, 16)
+        Me.lblMaster90.Size = New System.Drawing.Size(121, 16)
         Me.lblMaster90.TabIndex = 302
         Me.lblMaster90.Text = "September 19, 2020"
         '
@@ -1698,7 +1715,7 @@ Partial Class frmMain1
         Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(18, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(206, Byte), Integer))
         Me.Label11.Location = New System.Drawing.Point(742, 51)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(65, 16)
+        Me.Label11.Size = New System.Drawing.Size(64, 16)
         Me.Label11.TabIndex = 301
         Me.Label11.Text = "POS Date:"
         '
@@ -1776,7 +1793,7 @@ Partial Class frmMain1
         Me.lblMaster80.Location = New System.Drawing.Point(982, 35)
         Me.lblMaster80.Name = "lblMaster80"
         Me.lblMaster80.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.lblMaster80.Size = New System.Drawing.Size(22, 16)
+        Me.lblMaster80.Size = New System.Drawing.Size(21, 16)
         Me.lblMaster80.TabIndex = 294
         Me.lblMaster80.Text = "01"
         '
@@ -1787,7 +1804,7 @@ Partial Class frmMain1
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(18, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(206, Byte), Integer))
         Me.Label3.Location = New System.Drawing.Point(692, 35)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(114, 16)
+        Me.Label3.Size = New System.Drawing.Size(113, 16)
         Me.Label3.TabIndex = 293
         Me.Label3.Text = "POS Terminal No.:"
         '
@@ -1819,23 +1836,6 @@ Partial Class frmMain1
         '
         Me.Timer2.Enabled = True
         Me.Timer2.Interval = 1000
-        '
-        'cmdButton16
-        '
-        Me.cmdButton16.BackColor = System.Drawing.SystemColors.Control
-        Me.cmdButton16.BackgroundImage = CType(resources.GetObject("cmdButton16.BackgroundImage"), System.Drawing.Image)
-        Me.cmdButton16.FlatAppearance.BorderSize = 0
-        Me.cmdButton16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cmdButton16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdButton16.ForeColor = System.Drawing.SystemColors.Control
-        Me.cmdButton16.Location = New System.Drawing.Point(4, 5)
-        Me.cmdButton16.Margin = New System.Windows.Forms.Padding(2)
-        Me.cmdButton16.Name = "cmdButton16"
-        Me.cmdButton16.Size = New System.Drawing.Size(100, 35)
-        Me.cmdButton16.TabIndex = 48
-        Me.cmdButton16.TabStop = False
-        Me.cmdButton16.Text = "NEW ORDER"
-        Me.cmdButton16.UseVisualStyleBackColor = False
         '
         'frmMain1
         '
