@@ -543,7 +543,8 @@ endProc:
         lblMaster13.Text = FormatNumber(p_oTrans.Master("nVATSales"), 2) 'vat sales
         lblMaster14.Text = FormatNumber(p_oTrans.Master("nVATAmtxx"), 2) 'vat amount
         lblMaster15.Text = FormatNumber(p_oTrans.Master("nNonVATxx") - p_oTrans.Master("nPWDDiscx"), 2) 'non vat 
-        lblMaster17.Text = FormatNumber(p_oTrans.Master("nDiscount") + p_oTrans.Master("nVatDiscx") + p_oTrans.Master("nPWDDiscx"), 2) 'discounts
+        Debug.Print(p_oTrans.Master("nPWDDiscx"))
+        lblMaster17.Text = FormatNumber(p_oTrans.Master("nDiscount") + p_oTrans.Master("nVatDiscx") + p_oTrans.Master("nPWDDiscx") + 0.00001, 2) 'discounts
         'jovan 03-12-2021
 
         lnSrvCrge = IFNull(p_oTrans.Master("nSChargex"), 0)
