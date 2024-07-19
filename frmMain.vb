@@ -470,6 +470,15 @@ endProc:
             lblMaster91.Text = "," & Format(poSales.POSDate, "dddd")
             lblMaster92.Text = IIf(.Master("sTableNox") = "0" Or .Master("sTableNox") = "", "", "T" & .Master("sTableNox"))
 
+            Dim lnStat = Not poSales.SalesStatus = xeTranStat.TRANS_OPEN
+
+            pnlMenu.Enabled = lnStat
+            pnlCategory.Enabled = lnStat
+            pnlDetButt.Enabled = lnStat
+            cmdButton19.Enabled = lnStat
+            txtDetail00.Enabled = lnStat
+
+
         End With
     End Sub
 
