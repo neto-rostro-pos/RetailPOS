@@ -122,6 +122,13 @@ Public Class frmMain
         End If
         Call initCategoryImages()
 
+
+        If poSales.SalesStatus = xeTranStat.TRANS_OPEN Then
+            MsgBox("Unable to create New Order, Please tag (Pay / Void) all Pending Orders and perform a EOD.",
+                            MsgBoxStyle.Critical,
+                            "Warning")
+
+        End If
         loadMaster()
         loadTable()
     End Sub
@@ -1611,6 +1618,5 @@ endProc:
             txtDetail00.AutoCompleteMode = AutoCompleteMode.None
         End If
     End Sub
-
 
 End Class
