@@ -73,7 +73,7 @@ Public Class frmMain
 
 
 
-
+        Call p_oTrans.getPriceUpdateToday()
         Call initCategoryImages()
         If p_oAppDriver.BranchCode = "P013" Then
             initDetailImages("0021")
@@ -237,20 +237,12 @@ Public Class frmMain
                     p_oAppDriver.SaveEvent("0027", "", p_oTrans.SerialNo)
                     Me.Close()
                 End If
-            Case Keys.F5
-                'Call newOrder()
-                Call ClearOrder()
             Case Keys.Add
                 Call procValues(2)
                 e.SuppressKeyPress = True
             Case Keys.Subtract
                 Call procValues(1)
                 e.SuppressKeyPress = True
-            Case Keys.F9 'pay charge
-                p_oTrans.PrintChargeOR()
-                Call newOrder()
-            Case Keys.F10 'tag charge
-                p_oTrans.PayCharge()
                 Call newOrder()
             Case Keys.F7 'Charge Invoice
                 If p_oTrans.ChargeOrder() Then newOrder()
@@ -259,13 +251,25 @@ Public Class frmMain
 
                 loRLC = New PRN_RLC_Reading(p_oAppDriver)
                 loRLC.showRLC()
-            Case Keys.F9
-                'p_oTrans.ReComputeReading()
+            'Case Keys.F9
+            '    'p_oTrans.ReComputeReading()
+            Case Keys.F8 'GetLatestPriceUpdate
+                If Not p_oAppDriver.getUserApproval() Then Exit Sub
+                p_oTrans.getPriceUpdateToday(True)
+            Case Keys.F5
+                'Call newOrder()
+                Call ClearOrder()
+            Case Keys.F9 'pay charge
+                p_oTrans.PrintChargeOR()
+            Case Keys.F10 'tag charge
+                p_oTrans.PayCharge()
+                Call newOrder()
             Case Keys.F11 'browse order
                 p_oTrans.BrowseOrder()
             Case Keys.F12 'reprint or
                 p_oTrans.Reprint()
         End Select
+
     End Sub
 
     Private Sub Timer2_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer2.Tick
