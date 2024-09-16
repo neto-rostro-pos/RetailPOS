@@ -102,11 +102,6 @@ D:\LP POS\POSold\RetailPOS\obj\x86\Debug\RetailPOS.vbproj.CopyComplete
 D:\LP POS\POSold\RetailPOS\obj\x86\Debug\RetailPOS.exe
 D:\LP POS\POSold\RetailPOS\obj\x86\Debug\RetailPOS.xml
 D:\LP POS\POSold\RetailPOS\obj\x86\Debug\RetailPOS.pdb
-C:\GGC_Systems\vb.net\RetMgySys\WinSCP.exe
-C:\GGC_Systems\vb.net\RetMgySys\RetailPOS.exe.config
-C:\GGC_Systems\vb.net\RetMgySys\RetailPOS.exe
-C:\GGC_Systems\vb.net\RetMgySys\RetailPOS.pdb
-C:\GGC_Systems\vb.net\RetMgySys\RetailPOS.xml
 D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailPOS\obj\x86\Debug\RetailPOS.vbproj.AssemblyReference.cache
 D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailPOS\obj\x86\Debug\RetailPOS.frmMain.resources
 D:\Guanzon\GMC SEG Folder\vb.net\TJ\POSold\RetailPOS\obj\x86\Debug\RetailPOS.frmMain1.resources

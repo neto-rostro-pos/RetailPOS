@@ -38,7 +38,7 @@
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
-    <OutputPath>C:\GGC_Systems\vb.net\RetMgySys\</OutputPath>
+    <OutputPath>C:\GGC_Systems\vb.net\RetMgtSys\</OutputPath>
     <DocumentationFile>RetailPOS.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <Prefer32Bit>false</Prefer32Bit>
@@ -348,10 +348,6 @@
     <ProjectReference Include="..\ggcPayment\ggcPayment.vbproj">
       <Project>{a7bb8738-7dd6-45a0-90c9-fc346648fbf3}</Project>
       <Name>ggcPayment</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ggcRetailParams\ggcRetailParams\ggcRetailParams.vbproj">
-      <Project>{4883F473-C0B0-4266-A9AC-8E4BCA3C4CB7}</Project>
-      <Name>ggcRetailParams</Name>
     </ProjectReference>
     <ProjectReference Include="..\ggcRetailSales\ggcRetailSales.vbproj">
       <Project>{81352368-B116-4D39-8FFB-5A74905DE7F8}</Project>
