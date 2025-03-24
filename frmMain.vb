@@ -117,7 +117,7 @@ Public Class frmMain
         p_oTrans.Cashier = psCashierx
         p_oTrans.LogName = modMain.p_sLogName
 
-        Debug.Print(psCashierx)
+        'Debug.Print(psCashierx)
 
         If p_oAppDriver.BranchCode = "P013" Then
             initDetailImages("0021")
@@ -570,7 +570,7 @@ endProc:
         lblMaster13.Text = FormatNumber(p_oTrans.Master("nVATSales"), 2) 'vat sales
         lblMaster14.Text = FormatNumber(p_oTrans.Master("nVATAmtxx"), 2) 'vat amount
         lblMaster15.Text = FormatNumber(p_oTrans.Master("nNonVATxx") - p_oTrans.Master("nPWDDiscx"), 2) 'non vat 
-        Debug.Print(p_oTrans.Master("nPWDDiscx"))
+        'Debug.Print(p_oTrans.Master("nPWDDiscx"))
         lblMaster17.Text = FormatNumber(p_oTrans.Master("nDiscount") + p_oTrans.Master("nVatDiscx") + p_oTrans.Master("nPWDDiscx") + 0.00001, 2) 'discounts
         'jovan 03-12-2021
 
@@ -1252,7 +1252,7 @@ endProc:
 
             'Set Column Headers
             .Columns(0).HeaderText = "No"
-            .Columns(1).HeaderText = "Barrcode"
+            .Columns(1).HeaderText = "Barcode"
             .Columns(2).HeaderText = "Description"
             .Columns(3).HeaderText = "Qty"
             .Columns(4).HeaderText = "SRP"
@@ -1260,11 +1260,11 @@ endProc:
 
             'Set Column Sizes
             .Columns(0).Width = 30
-            .Columns(1).Width = 95
+            .Columns(1).Width = 125
             .Columns(2).Width = 160
             .Columns(3).Width = 40
-            .Columns(4).Width = 75
-            .Columns(5).Width = 80
+            .Columns(4).Width = 55
+            .Columns(5).Width = 70
 
             .Columns(0).SortMode = DataGridViewColumnSortMode.NotSortable
             .Columns(1).SortMode = DataGridViewColumnSortMode.NotSortable
