@@ -150,7 +150,7 @@ Module modMain
             MsgBox(ex.Message)
             Return -1
         End Try
-        Debug.Print(poSales.SalesStatus)
+        'Debug.Print(poSales.SalesStatus)
         Return poSales.SalesStatus
     End Function
 
