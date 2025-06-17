@@ -2,6 +2,7 @@
 Imports ggcAppDriver
 Imports ggcReceipt
 Imports System.Runtime.InteropServices
+Imports System.IO
 
 Public Class frmMain
     'fixed image max count
@@ -779,15 +780,28 @@ endProc:
         Dim loPic As PictureBox
 
         loPic = CType(FindPictureBox(Me, "picDetail" & Format(Index, "00")), PictureBox)
-        loPic.BackgroundImage = Image.FromFile(lsDirectory) 'load from location
-
+        If File.Exists(lsDirectory) Then
+            loPic.BackgroundImage = Image.FromFile(lsDirectory) 'load from location
+        End If
     End Sub
 
     Private Sub loadCategoryImages(ByVal Index As Integer, ByVal lsDirectory As String)
         Dim loPic As PictureBox
 
         loPic = CType(FindPictureBox(Me, "picCategr" & Format(Index, "00")), PictureBox)
-        loPic.BackgroundImage = Image.FromFile(lsDirectory) 'load from location
+
+        If loPic Is Nothing Then
+            ' PictureBox not found
+            Exit Sub
+        End If
+
+        If System.IO.File.Exists(lsDirectory) Then
+            loPic.BackgroundImage = Image.FromFile(lsDirectory)
+        Else
+            loPic.BackgroundImage = Nothing ' Or set to a default image
+
+            MsgBox("Image file not found: " & lsDirectory, MsgBoxStyle.Exclamation, "Image Load Error")
+        End If
     End Sub
 
     Private Sub picCategr06_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles picCategr04.MouseDown, picCategr05.MouseDown
