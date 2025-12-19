@@ -168,6 +168,11 @@ Public Class frmMain
                     Dim lbRefresh As Boolean
                     lbRefresh = IIf(.Detail(pnActiveRow, "nQuantity") = 1, True, False)
 
+                    If .Detail(pnActiveRow, "nQuantity") = 1 Then
+                        MsgBox("Unable to deduct selected item!" & vbCrLf &
+                              "Please void transaction or reveresed order to cancel the item", vbCritical)
+                        Exit Sub
+                    End If
                     If .DeductItem(pnActiveRow) Then showComputation()
                     If lbRefresh Then loadDetail()
                 Case 2 'add item
