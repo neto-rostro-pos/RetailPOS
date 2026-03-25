@@ -1,8 +1,9 @@
-﻿Imports ggcRetailSales
+﻿Imports System.Diagnostics
+Imports System.IO
+Imports System.Runtime.InteropServices
 Imports ggcAppDriver
 Imports ggcReceipt
-Imports System.Runtime.InteropServices
-Imports System.IO
+Imports ggcRetailSales
 
 Public Class frmMain
     'fixed image max count
@@ -689,18 +690,33 @@ endProc:
 #End Region
 
 #Region "PictureBox"
+    'Private Sub clearDetailImage(ByVal Index As Integer)
+    '    Dim loPic As PictureBox
+
+    '    loPic = CType(FindPictureBox(Me, "picDetail" & Format(Index, "00")), PictureBox)
+    '    loPic.BackgroundImage = Nothing
+    'End Sub
     Private Sub clearDetailImage(ByVal Index As Integer)
         Dim loPic As PictureBox
 
         loPic = CType(FindPictureBox(Me, "picDetail" & Format(Index, "00")), PictureBox)
-        loPic.BackgroundImage = Nothing
+
+        DisposePicture(loPic)
     End Sub
 
+    'Original
+    'Private Sub clearCategoryImage(ByVal Index As Integer)
+    '    Dim loPic As PictureBox
+
+    '    loPic = CType(FindPictureBox(Me, "picCategr" & Format(Index, "00")), PictureBox)
+    '    loPic.BackgroundImage = Nothing
+    'End Sub
     Private Sub clearCategoryImage(ByVal Index As Integer)
         Dim loPic As PictureBox
 
         loPic = CType(FindPictureBox(Me, "picCategr" & Format(Index, "00")), PictureBox)
-        loPic.BackgroundImage = Nothing
+
+        DisposePicture(loPic)
     End Sub
 
     Private Sub initCategoryImages()
@@ -781,33 +797,65 @@ endProc:
         End If
     End Sub
 
+    'Private Sub loadDetailImages(ByVal Index As Integer, ByVal lsDirectory As String)
+    '    Dim loPic As PictureBox
+
+    '    loPic = CType(FindPictureBox(Me, "picDetail" & Format(Index, "00")), PictureBox)
+    '    If File.Exists(lsDirectory) Then
+    '        loPic.BackgroundImage = Image.FromFile(lsDirectory) 'load from location
+    '    End If
+    'End Sub
     Private Sub loadDetailImages(ByVal Index As Integer, ByVal lsDirectory As String)
         Dim loPic As PictureBox
 
         loPic = CType(FindPictureBox(Me, "picDetail" & Format(Index, "00")), PictureBox)
+
+        If loPic Is Nothing Then Exit Sub
+
+        DisposePicture(loPic)
+
         If File.Exists(lsDirectory) Then
-            loPic.BackgroundImage = Image.FromFile(lsDirectory) 'load from location
+            loPic.BackgroundImage = LoadImageSafe(lsDirectory)
+            loPic.BackgroundImageLayout = ImageLayout.Stretch
+        Else
+            loPic.BackgroundImage = Nothing
         End If
     End Sub
-
     Private Sub loadCategoryImages(ByVal Index As Integer, ByVal lsDirectory As String)
         Dim loPic As PictureBox
 
         loPic = CType(FindPictureBox(Me, "picCategr" & Format(Index, "00")), PictureBox)
 
-        If loPic Is Nothing Then
-            ' PictureBox not found
-            Exit Sub
-        End If
+        If loPic Is Nothing Then Exit Sub
 
-        If System.IO.File.Exists(lsDirectory) Then
-            loPic.BackgroundImage = Image.FromFile(lsDirectory)
+        DisposePicture(loPic)
+
+        If File.Exists(lsDirectory) Then
+            loPic.BackgroundImage = LoadImageSafe(lsDirectory)
+            loPic.BackgroundImageLayout = ImageLayout.Stretch
         Else
-            loPic.BackgroundImage = Nothing ' Or set to a default image
-
-            MsgBox("Image file not found: " & lsDirectory, MsgBoxStyle.Exclamation, "Image Load Error")
+            loPic.BackgroundImage = Nothing
         End If
     End Sub
+
+    'Private Sub loadCategoryImages(ByVal Index As Integer, ByVal lsDirectory As String)
+    '    Dim loPic As PictureBox
+
+    '    loPic = CType(FindPictureBox(Me, "picCategr" & Format(Index, "00")), PictureBox)
+
+    '    If loPic Is Nothing Then
+    '        ' PictureBox not found
+    '        Exit Sub
+    '    End If
+
+    '    If System.IO.File.Exists(lsDirectory) Then
+    '        loPic.BackgroundImage = Image.FromFile(lsDirectory)
+    '    Else
+    '        loPic.BackgroundImage = Nothing ' Or set to a default image
+
+    '        MsgBox("Image file not found: " & lsDirectory, MsgBoxStyle.Exclamation, "Image Load Error")
+    '    End If
+    'End Sub
 
     Private Sub picCategr06_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles picCategr04.MouseDown, picCategr05.MouseDown
         Dim loPic As PictureBox
@@ -1649,6 +1697,38 @@ endProc:
             txtDetail00.AutoCompleteMode = AutoCompleteMode.SuggestAppend
         Else
             txtDetail00.AutoCompleteMode = AutoCompleteMode.None
+        End If
+    End Sub
+
+    Private p_cachedImages As New Dictionary(Of String, Image)
+
+    Private Function LoadImageSafe(ByVal path As String) As Image
+        Try
+            If path = "" Then Return Nothing
+            If p_cachedImages.ContainsKey(path) Then Return p_cachedImages(path)
+
+            If Not File.Exists(path) Then Return Nothing
+
+            Using fs As New FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read)
+                Using temp As Image = Image.FromStream(fs, False, False)
+                    Dim bmp As New Bitmap(temp)
+                    p_cachedImages(path) = bmp
+                    Return bmp
+                End Using
+            End Using
+
+        Catch ex As Exception
+            Debug.Print("Invalid image: " & path)
+            Return Nothing
+        End Try
+    End Function
+
+    Private Sub DisposePicture(ByVal pic As PictureBox)
+        If pic Is Nothing Then Exit Sub
+
+        If pic.BackgroundImage IsNot Nothing Then
+            pic.BackgroundImage.Dispose()
+            pic.BackgroundImage = Nothing
         End If
     End Sub
 
