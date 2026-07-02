@@ -156,8 +156,30 @@ Public Class frmMain
 
             .Quantity = CInt(Decimal.Truncate(IIf(lnValue = 0, 1, lnValue)))
             Select Case fnIndex
-                Case 0 'reverse
-                    If .ReverseOrder(pnActiveRow, .Detail(pnActiveRow, "nQuantity")) Then showComputation()
+                'Case 0 'reverse
+                    'If .ReverseOrder(pnActiveRow, .Detail(pnActiveRow, "nQuantity")) Then showComputation()
+                Case 0 'reverse / delete selected item if unsaved
+                    If .ItemCount = 0 Then Exit Sub
+                    Debug.Print(.ItemCount)
+                    If pnActiveRow < 0 OrElse pnActiveRow > .ItemCount - 1 Then Exit Sub
+                    If .Detail(pnActiveRow, "cDetailxx") = 1 Then Exit Sub
+                    If .Detail(pnActiveRow, "cReversed") = "1" Then Exit Sub
+                    If .Detail(pnActiveRow, "cReversex") = "-" Then Exit Sub
+
+                    If Not TransactionIsSaved() Then
+                        If MsgBox("Delete selected item from this unsaved order?", MsgBoxStyle.Question Or MsgBoxStyle.YesNo, "Confirm") = MsgBoxResult.Yes Then
+                            If DeleteUnsavedItem(pnActiveRow) Then
+                                loadDetail()
+                                showComputation()
+                            End If
+                        End If
+                    Else
+                        If .ReverseOrder(pnActiveRow, .Detail(pnActiveRow, "nQuantity")) Then
+                            showComputation()
+                        End If
+                    End If
+
+
                 Case 1 'deduct item
                     If .Detail(pnActiveRow, "nQuantity") = 1 Then
                         MsgBox("Unable to deduct selected item!" & vbCrLf &
@@ -200,6 +222,58 @@ Public Class frmMain
 
         ' Add any initialization after the InitializeComponent() call.
     End Sub
+
+    Private Function TransactionIsSaved() As Boolean
+        Try
+            Dim lsTransNo As String = ""
+
+            If p_oTrans IsNot Nothing AndAlso p_oTrans.Master("sTransNox") IsNot Nothing Then
+                lsTransNo = p_oTrans.Master("sTransNox").ToString().Trim()
+            End If
+
+            If String.IsNullOrWhiteSpace(lsTransNo) Then Return False
+
+            Dim lsSQL As String = "SELECT * FROM SO_Master WHERE sOrderNox = " & "'XX'" & " LIMIT 1"
+            Dim loDT As DataTable = p_oAppDriver.ExecuteQuery(lsSQL)
+            Return False
+            'Return (loDT IsNot Nothing AndAlso loDT.Rows.Count > 0)
+        Catch
+            Return True
+        End Try
+    End Function
+
+    Private Function DeleteUnsavedItem(ByVal fnRow As Integer) As Boolean
+        Try
+            Dim loField = GetType(New_Sales_Order).GetField("p_oDTDetail",
+            System.Reflection.BindingFlags.NonPublic Or System.Reflection.BindingFlags.Instance)
+
+            If loField Is Nothing Then Return False
+
+            Dim loDT As DataTable = DirectCast(loField.GetValue(p_oTrans), DataTable)
+            If loDT Is Nothing Then Return False
+            If fnRow < 0 OrElse fnRow > loDT.Rows.Count - 1 Then Return False
+
+            ' remove child rows first if this is a combo/master item
+            Do While fnRow < loDT.Rows.Count - 1 AndAlso Convert.ToString(loDT.Rows(fnRow + 1)("cDetailxx")) = "1"
+                loDT.Rows.RemoveAt(fnRow + 1)
+            Loop
+
+            ' remove the selected row
+            loDT.Rows.RemoveAt(fnRow)
+
+            ' re-number entries so the grid stays sane
+            If loDT.Columns.Contains("nEntryNox") Then
+                For i As Integer = 0 To loDT.Rows.Count - 1
+                    loDT.Rows(i)("nEntryNox") = i + 1
+                Next
+            End If
+
+            Return True
+        Catch ex As Exception
+            Debug.Print("DeleteUnsavedItem error: " & ex.Message)
+            Return False
+        End Try
+    End Function
 
 #Region "Form Events"
     Private Sub Form_Activated(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Activated
